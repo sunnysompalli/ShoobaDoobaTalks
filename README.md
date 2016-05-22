@@ -18,6 +18,6 @@
 -if all goes well, file transfer over secure connection 
 
 -----DEMO VERSIONS-----
-May 23rd: https://github.com/sunnysompalli/ShoobaDoobaTalksDemo/commits/master
+May 23rd: https://github.com/sunnysompalli/ShoobaDoobaTalksDemo
     -Works on single device at the moment
     -To run, open up terminal and run ShoobaServer.java. Then, open however many terminals based on the number of chatters you want.
