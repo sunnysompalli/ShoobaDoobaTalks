@@ -14,7 +14,6 @@ public class DoobaClient{
  
     public DoobaClient() {
 
-        // Layout GUI
         textField.setEditable(false);
         messageArea.setEditable(false);
         frame.getContentPane().add(textField, "North");
@@ -51,13 +50,11 @@ public class DoobaClient{
 
     private void run() throws IOException {
 
-        // Make connection and initialize streams
-        Socket socket = new Socket("localhost", 24525);
+        Socket socket = new Socket("149.89.1.30", 24525);
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
 
-        // Process all messages from server, according to the protocol.
         while (true) {
             String line = in.readLine();
             if (line.startsWith("SUBMITNAME")) {
@@ -69,10 +66,6 @@ public class DoobaClient{
             }
         }
     }
-
-    /**
-     * Runs the client as an application with a closeable frame.
-     */
     public static void main(String[] args) throws Exception {
         DoobaClient client = new DoobaClient();
         client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

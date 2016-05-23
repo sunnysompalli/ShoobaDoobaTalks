@@ -12,7 +12,7 @@ public class ShoobaServer{
 
     public static void main(String[] args) throws Exception {
         System.out.println("The chat server is running.");
-        ServerSocket listener = new ServerSocket(PORT);
+        ServerSocket listener = new ServerSocket(PORT, 0, "149.89.1.30");
         try {
             while (true) {
                 new Handler(listener.accept()).start();
@@ -71,8 +71,6 @@ public class ShoobaServer{
             } catch (IOException e) {
                 System.out.println(e);
             } finally {
-                // This client is going down!  Remove its name and its print
-                // writer from the sets, and close its socket.
                 if (name != null) {
                     names.remove(name);
                 }
