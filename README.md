@@ -1,21 +1,21 @@
 # ShoobaDoobaTalks 
 -----DEV LOG----- 
 5/12/16 
--begin socket research, benefits of socket VS. URLConnect 
+-Begin socket research, benefits of socket VS. URLConnect 
 
--use sockets to connect to programs, and pass a message 
+-Use sockets to connect to programs, and pass a message 
 
--read code of sample IRC client 
+-Read code of sample IRC client 
 
--are sockets read/write or just write? 
+-Are sockets read/write or just write? 
 
 
 
 -----PROJECT GOALS----- 
--functional connection 
--secure connection 
--message transfer over secure connection 
--if all goes well, file transfer over secure connection 
+-Functional connection 
+-Secure connection 
+-Message transfer over secure connection 
+-If all goes well, file transfer over secure connection 
 
 -----DEMO VERSIONS-----
 May 23rd: https://github.com/sunnysompalli/ShoobaDoobaTalksDemo
