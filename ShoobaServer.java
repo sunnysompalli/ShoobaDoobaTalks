@@ -1,10 +1,9 @@
-import java.util.*;
 import java.net.*;
 import java.util.*;
 import java.io.*;
 public class ShoobaServer{
 
-    private static int PORT = 24525;
+    private static int PORT = 39405;
 
     private static HashSet<String> names = new HashSet<String>();
 
@@ -12,7 +11,7 @@ public class ShoobaServer{
 
     public static void main(String[] args) throws Exception {
         System.out.println("The chat server is running.");
-        ServerSocket listener = new ServerSocket(PORT, 0, "149.89.1.30");
+        ServerSocket listener = new ServerSocket(PORT);
         try {
             while (true) {
                 new Handler(listener.accept()).start();
