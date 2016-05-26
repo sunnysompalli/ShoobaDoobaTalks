@@ -12,7 +12,7 @@ public class ShoobaServer{
 
     public static void main(String[] args) throws Exception {
         System.out.println("The chat server is running.");
-        ServerSocket listener = new ServerSocket(PORT, 0, "149.89.1.30");
+        ServerSocket listener = new ServerSocket(PORT);
         try {
             while (true) {
                 new Handler(listener.accept()).start();
