@@ -9,6 +9,11 @@
 
 -Are sockets read/write or just write?
 
+5/13/16 - 5/20/16
+-Figure out how sockets and networking work
+
+-Test sample code for sockets and try to figure out how to connect to external IPs
+
 5/16/16
 -Make connection over url and not just localhost
 
@@ -21,6 +26,16 @@
 -check if ports that clients chose are not blocked or not currently in use 
 
 -what the hell is URLConnect  
+
+5/23/16
+
+-Attempted to use GUI on external IP address
+
+-Reverted to localhost version
+
+5/26/16
+
+-Worked further to use external IP address
 
 
 
