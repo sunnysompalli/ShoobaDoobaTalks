@@ -1,6 +1,7 @@
 # ShoobaDoobaTalks 
 -----DEV LOG----- 
 5/12/16 
+
 -Begin socket research, benefits of socket VS. URLConnect 
 
 -Use sockets to connect to programs, and pass a message 
@@ -10,11 +11,13 @@
 -Are sockets read/write or just write?
 
 5/13/16 - 5/20/16
+
 -Figure out how sockets and networking work
 
 -Test sample code for sockets and try to figure out how to connect to external IPs
 
 5/16/16
+
 -Make connection over url and not just localhost
 
 -Allow clients to choose their own ports 
