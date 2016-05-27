@@ -7,7 +7,20 @@
 
 -Read code of sample IRC client 
 
--Are sockets read/write or just write? 
+-Are sockets read/write or just write?
+
+5/16/16
+-Make connection over url and not just localhost
+
+-Allow clients to choose their own ports 
+
+5/22/16
+
+-Check if URL is hosting a client 
+
+-check if ports that clients chose are not blocked or not currently in use 
+
+-what the hell is URLConnect  
 
 
 
