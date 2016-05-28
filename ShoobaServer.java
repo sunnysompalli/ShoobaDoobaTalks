@@ -1,6 +1,7 @@
 import java.net.*;
 import java.util.*;
 import java.io.*;
+import java.util.SocketUtil;
 public class ShoobaServer{
 
     private static int PORT = 39405;
@@ -13,8 +14,8 @@ public class ShoobaServer{
         Scanner reader = new Scanner(System.in);
 	System.out.println("the default port is set to " + PORT + " if you would like to change this port, print yes or no followed by the port you would like");
 	if (reader.next().substring(0,3).equals("yes")){
-	    int tempport = reader.next().substring(2, reader.next().length()).parseInt();
-		if (IsPortInUse(tempport) == false){
+	    int tempport =Integer.parseInt( reader.next().substring(2, reader.next().length()));
+		if (SocketUtil.IsPortInUse(tempport) == false){
 		    PORT = tempport;
 		    System.out.println("This is your new port!");
 			}
