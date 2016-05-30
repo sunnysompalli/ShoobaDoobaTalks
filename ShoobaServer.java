@@ -15,16 +15,16 @@ public class ShoobaServer{
 	if (reader.next().substring(0,3).equals("yes")){
 	    int tempport =Integer.parseInt( reader.next().substring(2, reader.next().length()));
 		try {
-            Socket sucket = new Socket("localhost", tempport);
-            sucket.close();
-            PORT = tempport;
-            System.out.println("port: " + PORT + " is your new port!");
+            System.out.println("debugging");
         }
         catch(Exception e) {
             System.out.println("Sorry, this port is taken, resorting to default");
         }
 	    }
-	    else{
+	if (reader.next().substring(0,3).equals("no")){
+	    System.out.println("The default port will be used");
+	}
+	    {
 		System.out.println("The default port will be used!");}
 	
         ServerSocket listener = new ServerSocket(PORT);
