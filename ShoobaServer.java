@@ -12,20 +12,21 @@ public class ShoobaServer{
     public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
 	System.out.println("the default port is set to " + PORT + " if you would like to change this port, print yes or no followed by the port you would like");
-	if (reader.next().substring(0,3).equals("yes")){
-	    int tempport =Integer.parseInt( reader.next().substring(2, reader.next().length()));
+	if (reader.next().equals("yes")){
+	    int tempport =reader.nextInt();
 		try {
-            System.out.println("debugging");
+            Socket sucket = new Socket("localhost", tempport);
+            sucket.close();
+            PORT = tempport;
+            System.out.println("port: " + PORT + " is your new port!");
         }
         catch(Exception e) {
             System.out.println("Sorry, this port is taken, resorting to default");
         }
 	    }
-	if (reader.next().substring(0,3).equals("no")){
+	else {
 	    System.out.println("The default port will be used");
 	}
-	    {
-		System.out.println("The default port will be used!");}
 	
         ServerSocket listener = new ServerSocket(PORT);
         try {
