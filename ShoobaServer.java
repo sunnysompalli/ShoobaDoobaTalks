@@ -10,7 +10,24 @@ public class ShoobaServer{
     private static HashSet<PrintWriter> writers = new HashSet<PrintWriter>();
 
     public static void main(String[] args) throws Exception {
-        System.out.println("The chat server is running.");
+        Scanner reader = new Scanner(System.in);
+	System.out.println("the default port is set to " + PORT + " if you would like to change this port, print yes or no followed by the port you would like");
+	if (reader.next().equals("yes")){
+	    int tempport =reader.nextInt();
+		try {
+	    ServerSocket sucket = new ServerSocket( tempport);
+            sucket.close();
+            PORT = tempport;
+            System.out.println("port: " + PORT + " is your new port!");
+        }
+        catch(Exception e) {
+            System.out.println("This port isn't available, the default will be used");
+	            }
+	    }
+	else {
+	    System.out.println("The default port will be used");
+	}
+	
         ServerSocket listener = new ServerSocket(PORT);
         try {
             while (true) {
