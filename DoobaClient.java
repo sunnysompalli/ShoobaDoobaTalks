@@ -3,6 +3,7 @@ import java.net.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
+import java.lang.Runtime;
 public class DoobaClient{
 
     BufferedReader in;
@@ -50,7 +51,7 @@ public class DoobaClient{
 
     private void run() throws IOException {
 
-        Socket socket = new Socket("localhost", 12345);
+    Socket socket = new Socket("localhost",) ;
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
@@ -65,7 +66,7 @@ public class DoobaClient{
                 messageArea.append(line.substring(8) + "\n");
             }
         }
-    }
+	}
     public static void main(String[] args) throws Exception {
         DoobaClient client = new DoobaClient();
         client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
