@@ -39,6 +39,12 @@ public class DoobaClient{
             JOptionPane.QUESTION_MESSAGE);
     }
 
+    private String getPort() {
+        return JOptionPane.showInputDialog(
+            frame,
+            "Enter port of the server",
+            JOptionPane.QUESTION_MESSAGE);
+    }
 
     private String getName() {
         return JOptionPane.showInputDialog(
@@ -51,7 +57,11 @@ public class DoobaClient{
 
     private void run() throws IOException {
 	String s = (String)getServerAddress();
-    Socket socket = new Socket(s,12345) ;
+	InetAddress server = InetAddress.getByName(s);
+	int p = Integer.parseInt(getPort()); 
+	SocketAddress addr = new InetSocketAddress(server, p);
+    Socket socket = new Socket() ;
+    socket.connect(addr);
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
