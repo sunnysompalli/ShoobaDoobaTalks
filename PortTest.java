@@ -12,7 +12,7 @@ public class PortTest {
     BufferedReader reader = 
     new BufferedReader(new InputStreamReader(p.getInputStream()));
     for (line : reader){
-    System.out.println(line);
+	System.out.println(line);}
 	}
 	catch (Exception ex){
 	    ex.printStackTrace();}

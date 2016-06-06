@@ -29,6 +29,7 @@ public class ShoobaServer{
 	}
 	
         ServerSocket listener = new ServerSocket(PORT);
+	System.out.println(listener.getInetAddress());
         try {
             while (true) {
                 new Handler(listener.accept()).start();
