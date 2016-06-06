@@ -50,7 +50,11 @@ public class DoobaClient{
 
     private void run() throws IOException {
 
+<<<<<<< HEAD
         Socket socket = new Socket("192.168.1.5", 39405);
+=======
+        Socket socket = new Socket("127.0.0.1", 39405);
+>>>>>>> master
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
