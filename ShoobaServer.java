@@ -11,7 +11,8 @@ public class ShoobaServer{
 
     public static void main(String[] args) throws Exception {
         System.out.println("The chat server is running.");
-        ServerSocket listener = new ServerSocket(PORT);
+	ServerSocket listener = new ServerSocket(PORT, 0, InetAddress.getByName("192.168.1.5"));
+
         try {
             while (true) {
                 new Handler(listener.accept()).start();
