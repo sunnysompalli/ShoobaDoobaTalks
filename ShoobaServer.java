@@ -10,11 +10,9 @@ public class ShoobaServer{
     private static HashSet<PrintWriter> writers = new HashSet<PrintWriter>();
 
     public static void main(String[] args) throws Exception {
-<<<<<<< HEAD
         System.out.println("The chat server is running.");
 	ServerSocket listener = new ServerSocket(PORT, 0, InetAddress.getByName("192.168.1.5"));
 
-=======
         Scanner reader = new Scanner(System.in);
 	System.out.println("the default port is set to " + PORT + " if you would like to change this port, print yes or no followed by the port you would like");
 	if (reader.next().equals("yes")){
@@ -34,7 +32,6 @@ public class ShoobaServer{
 	}
 	
         ServerSocket listener = new ServerSocket(PORT);
->>>>>>> master
         try {
             while (true) {
                 new Handler(listener.accept()).start();
