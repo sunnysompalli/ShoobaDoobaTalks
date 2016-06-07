@@ -72,18 +72,14 @@ Shooba Dooba Talks is brought to you by ShoobaDooba
 
 -Polished things up
 
--Allow private chats
-
--Allow file transfer
+-Made fun text emoji buttons
 
 
 -----PROJECT GOALS-----
  
 -Functional connection 
 
--Message transfer 
-
--If all goes well, file transfer over secure connection 
+-Message transfer  
 
 -----DEMO VERSIONS-----
 
