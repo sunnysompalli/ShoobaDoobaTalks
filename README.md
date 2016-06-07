@@ -1,5 +1,9 @@
-# ShoobaDoobaTalks 
+# Shooba Dooba Talks
+
+#Brought to you by Shooba Dooba 
+
 -----DEV LOG----- 
+
 5/12/16 
 
 -Begin socket research, benefits of socket VS. URLConnect 
@@ -73,12 +77,18 @@
 -Allow file transfer
 
 
------PROJECT GOALS----- 
+-----PROJECT GOALS-----
+ 
 -Functional connection 
+
 -Message transfer 
+
 -If all goes well, file transfer over secure connection 
 
 -----DEMO VERSIONS-----
+
 May 23rd: https://github.com/sunnysompalli/ShoobaDoobaTalksDemo
+   
     -Works on single device at the moment
+   
     -To run, open up terminal and run ShoobaServer.java. Then, open however many terminals based on the number of chatters you want.
