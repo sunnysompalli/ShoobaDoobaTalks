@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 public class ShoobaServer{
 
-    private static int PORT = 39405;
+    private static int PORT = 54321;
 
     private static HashSet<String> names = new HashSet<String>();
 
@@ -29,6 +29,7 @@ public class ShoobaServer{
 	}
 	
         ServerSocket listener = new ServerSocket(PORT);
+	System.out.println(listener.getInetAddress());
         try {
             while (true) {
                 new Handler(listener.accept()).start();
