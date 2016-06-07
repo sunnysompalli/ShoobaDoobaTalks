@@ -56,6 +56,10 @@ public class DoobaClient{
 
 
     private void run() throws IOException {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 115fcdb066f4c1eb9a3f3e59efa3f0691dc1d92b
 	String s = (String)getServerAddress();
 	InetAddress server = InetAddress.getByName(s);
 	int p = Integer.parseInt(getPort()); 
