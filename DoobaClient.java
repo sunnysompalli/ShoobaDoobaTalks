@@ -3,6 +3,7 @@ import java.net.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
+import java.lang.Runtime;
 public class DoobaClient{
 
     BufferedReader in;
@@ -38,6 +39,12 @@ public class DoobaClient{
             JOptionPane.QUESTION_MESSAGE);
     }
 
+    private String getPort() {
+        return JOptionPane.showInputDialog(
+            frame,
+            "Enter port of the server",
+            JOptionPane.QUESTION_MESSAGE);
+    }
 
     private String getName() {
         return JOptionPane.showInputDialog(
@@ -49,8 +56,17 @@ public class DoobaClient{
 
 
     private void run() throws IOException {
+<<<<<<< HEAD
 
         Socket socket = new Socket("127.0.0.1", 39405);
+=======
+	String s = (String)getServerAddress();
+	InetAddress server = InetAddress.getByName(s);
+	int p = Integer.parseInt(getPort()); 
+	SocketAddress addr = new InetSocketAddress(server, p);
+    Socket socket = new Socket() ;
+    socket.connect(addr);
+>>>>>>> 115fcdb066f4c1eb9a3f3e59efa3f0691dc1d92b
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
@@ -65,7 +81,7 @@ public class DoobaClient{
                 messageArea.append(line.substring(8) + "\n");
             }
         }
-    }
+	}
     public static void main(String[] args) throws Exception {
         DoobaClient client = new DoobaClient();
         client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
