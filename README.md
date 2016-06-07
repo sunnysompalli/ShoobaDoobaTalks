@@ -1,6 +1,6 @@
 # Shooba Dooba Talks
 
-#Brought to you by Shooba Dooba 
+Shooba Dooba Talks is brought to you by ShoobaDooba 
 
 -----DEV LOG----- 
 
