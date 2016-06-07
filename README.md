@@ -40,12 +40,42 @@
 
 -Worked further to use external IP address
 
+5/27/16
+
+-Make changes so that the user can change the port the server is hosted on
+
+5/29/16
+
+-Further worked on giving the user the ability to change the port
+
+-Debug work
+
+5/30/16
+
+-Tested more with changing how the server is hosted
+
+5/31/16
+
+-Made final changes to how user can change port and is now functional
+
+6/3/16
+
+-Created method that allows user to find open ports
+
+6/6/16
+
+-Made network connection work
+
+-Polished things up
+
+-Allow private chats
+
+-Allow file transfer
 
 
 -----PROJECT GOALS----- 
 -Functional connection 
--Secure connection 
--Message transfer over secure connection 
+-Message transfer 
 -If all goes well, file transfer over secure connection 
 
 -----DEMO VERSIONS-----
