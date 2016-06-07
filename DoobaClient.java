@@ -56,17 +56,13 @@ public class DoobaClient{
 
 
     private void run() throws IOException {
-<<<<<<< HEAD
 
-        Socket socket = new Socket("127.0.0.1", 39405);
-=======
 	String s = (String)getServerAddress();
 	InetAddress server = InetAddress.getByName(s);
 	int p = Integer.parseInt(getPort()); 
 	SocketAddress addr = new InetSocketAddress(server, p);
     Socket socket = new Socket() ;
     socket.connect(addr);
->>>>>>> 115fcdb066f4c1eb9a3f3e59efa3f0691dc1d92b
         in = new BufferedReader(new InputStreamReader(
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
